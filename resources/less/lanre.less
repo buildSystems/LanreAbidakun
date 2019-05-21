@@ -1,0 +1,771 @@
+@font-face{
+  font-family: "Gadugi";
+  src: url('/css/fonts/gadugi.ttf') format('truetype');
+}
+@font-face{
+  font-family: "Gadugi";
+  src: url('/css/fonts/gadugi-bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face{
+  font-family: "Nunito";
+  src: url('/css/fonts/nunito.woff') format('woff'),
+     url('/css/fonts/nunito.woff2') format('woff2');
+}
+@font-face{
+  font-family: "Nunito";
+  src: url('/css/fonts/nunito-bold.woff') format('woff'),
+    url('/css/fonts/nunito-bold.woff2') format('woff2');
+  font-weight: bold;
+}
+@font-face{
+  font-family: "Nunito";
+  src: url('/css/fonts/nunito-light.woff') format('woff'),
+     url('/css/fonts/nunito-light.woff2') format('woff2');
+  font-style: normal;
+}
+
+/*====================================================================================================
+End of imports
+=====================================================================================================*/
+
+
+/*=====================================================================================================
+Begin variables
+======================================================================================================*/
+
+
+@highest-z-index: 9999;
+
+
+/*====================================================================================================
+End of variables
+=====================================================================================================*/
+
+
+/*=====================================================================================================
+Begin extensibles
+======================================================================================================*/
+
+
+@highest-z-index: 9999;
+@screen: #72d623;
+@dark_green: #0d5013;
+@app_blue: #014783;
+@app_black:  #585858;
+@slidein: #272b44;
+@slidein_bottom: #edc8ab;
+@media768: ~"only screen and (max-width: 768px) and (min-width: 320px)";
+@beige: #7b6b38;
+
+
+.shadow(){
+  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+}
+
+/*====================================================================================================
+End of extensibles
+=====================================================================================================*/
+
+body{
+
+  background-color: white;
+  font-family: "Open sans";
+  color:@app_black;
+  
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+}
+
+p, a{
+
+  font-size: 14px;
+  &:hover{
+    text-decoration: none;
+  }
+
+}
+
+.container{
+  display: block !important;
+  margin: auto !important;
+  padding: 0px !important;
+}
+
+.navbar{
+  box-shadow: 0px 2px 5px rgba(0,0,0,.2);
+  border-top: 4px solid @beige;
+  width: 100%;
+  position: fixed;
+  z-index: @highest-z-index;
+  background-color: white;
+
+  .container{
+    position: relative;
+
+    .navbar-toggler{
+      position: absolute;
+      right: 0px;
+      top: calc(50% - 25px);
+      font-size: xx-large;
+    }
+
+    #main-nav{
+
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+
+      @media @media768{
+        display: none;
+      }
+
+      .nav-item{
+        margin-left: 16px;
+        font-size: 12px;
+
+        &.active, &:hover{
+          border-bottom: 1.5px solid @beige;
+          a{
+            text-transform: uppercase;
+            color: @beige;
+            
+          }
+
+        }
+
+        a{
+          text-transform: uppercase;  
+          font-size: 12px; 
+        }
+
+      }
+     
+    }
+
+  }
+}
+
+.header{
+  idth: 100%;
+  height: 550px;
+  margin-top: 50px;
+  background-size: cover;
+
+  &.home{
+    background-image: url('/images/home_bg.jpg');
+  }
+  &.about{
+    
+    background-image: url('/images/bookkeeping.jpg');
+    
+    
+    .container{
+      
+      height: 100%;
+      
+      .slidein{
+        
+        background-color: fade(@app_blue, 90%);
+        color: white;
+        display: block;
+        float: right;
+        padding: 24px;
+        width: 450px;
+        height: 100%;
+
+        h1{
+          font-size: 45px;
+          &:first-child{
+            margin-top: 100px;
+          }
+          &.yellow{
+            color: yellow;
+            position: relative;
+            line-height: 80px;
+            text-align: top;
+
+            &:after{
+              content: "";
+              position: absolute;
+              width: 40%;
+              height: 2px;
+              border-bottom: 2px solid yellow;
+              bottom: 0px;
+              left: 0px;
+            }
+          }
+        }
+
+        p{
+          font-size: large;
+        }
+
+      }
+    }
+  }
+
+  .container{
+
+    .caption{
+      background-color: @app_blue;
+      color: white;
+      display: block;
+      margin-top: 100px;
+      float: right;
+      padding: 24px;
+      width: 450px;
+
+      h1{
+        font-size: 50px;
+      }
+
+      p{
+        font-size: large;
+      }
+
+    }
+
+    
+  } 
+
+  &.services{
+    background-image: url('/images/consulting.jpg');
+  }
+
+  &.blog{
+    background-image: url('/images/blog.jpg');
+  }
+
+  &.contact-us{
+    background-image: url('/images/map.jpg');
+  }
+
+  /*&.basic{
+    background-image: url('/images/basic.jpg');
+    height: 800px !important;
+  }
+
+
+  &.quality{
+    background-image: url('/images/quality.jpg');
+    height: 800px !important;
+  }*/
+
+}
+
+section{
+  margin-top: 100px;
+  padding: 0px;
+}
+
+.about-section{  
+
+  .container{
+    height: 250px;
+    
+    .row{
+
+      height: 100%;
+      
+
+      div{
+        height: 100%;
+      }
+
+      div:first-child{
+        overflow: hidden;
+        padding: 0px;
+        img{
+          height: 100%;
+        }
+      }
+
+
+      div:nth-child(2){
+        background-color: @beige;
+        p{
+          text-align: center;
+          line-height: 250px;
+          font-size: 20px;
+          color: white;
+          font-weight: bold;
+        }
+      }
+
+      div:last-child{
+        background-image: url('/images/woman-entrepreneur.jpg');
+        background-size: cover;
+        background-position: right;
+        padding: 0px;
+
+        .blue-screen{
+          width: 50%;
+          height: 100%;
+          background-color: @app_blue;
+          background-image: none;
+          opacity: .7;
+        }
+      }
+
+    }
+
+  }
+  
+}
+
+.main-content{
+  
+  .container{
+
+    p{
+      padding: 0px;
+      font-size: large;
+      text-align: justify;
+    }
+
+  }
+
+}
+
+.what-we-do-left{
+  
+  padding: 50px;
+
+  h1{
+    font-size: 45px;
+    color: @app_blue;
+    margin: 50px 0px;
+  }
+
+  p{
+    width: 400px;
+    margin-bottom: 50px;
+    font-size: large;
+  }
+
+  a{
+    padding: 10px 24px;
+    background-color: @beige;
+    color: white;
+    border-radius: 15px;
+    
+  }
+}
+
+.what-we-do-right{
+
+  .row{
+    height: 250px;
+    img{
+      width: 200px;
+      height: 250px;
+       margin: 0px;
+    }
+
+    div{
+      padding: 20px 50px;
+      margin: 0px;
+      box-sizing: border-box;
+      width: 200px;
+      height: 250px;
+
+      &.experience{
+        background-color: @app_blue;
+      }
+
+      &.reliable{
+        background-color: @beige;
+      }
+      p{
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.0em;
+        margin-top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  
+  
+}
+
+.how-we-help{
+  height: 800px !important;
+}
+
+.our-services{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
+  .service{
+
+    width: 20%;
+    margin: 0px 5px;
+    box-sizing: border-box;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+
+    p{
+      text-align: left;
+      font-weight: normal;
+      font--size: small;
+    }
+
+    h4{
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    &:hover{
+      -webkit-transform: translateY(-16px);
+      transform: translateY(-16px);
+    }
+
+  }
+
+}
+
+.mission, .how-we-help, .service-desc, .basic, .quality, .expertise, .cost{
+  width: 100%;
+  height: 600px;
+  background-image: url('/images/business.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+.methodology{
+  width: 100%;
+  height: 700px;
+  background-image: url('/images/business.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+.section-header{
+  background-color: fade(@beige, 70%);
+  padding: 50px 0px;
+  text-align: center;
+  color: white;
+      
+  font-weight: bold;
+  p{
+    font-size: normal;
+  }
+}
+
+.section-content{
+
+  background-color: white;
+  padding: 80px 0px;
+  color: @app_black;
+
+
+  p{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  position: relative;
+
+  .container{
+    text-align: center;
+
+    ul{
+      list-style-type: none;
+      padding-left: 0px;
+    }
+  }
+
+  &::before{
+    content: "";
+    border-bottom: 20px solid white;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: calc(50% - 10px);
+    top: -20px;
+  }
+  
+}
+
+.services-section{
+  
+  margin-bottom: 0px !important;
+
+  .container{
+
+    .row{
+      
+      display: flex;
+      flex-drection: row;
+      flex-wrap: nowrap;
+      
+      .service-list{
+        padding: 30px 0px;
+        margin: 1px;
+        color: white;
+        text-align: center;
+
+        p{
+          font-size: large;
+          font-weight: bold;
+        }
+
+        &:hover, &.active{
+          -webkit-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+        }
+
+      }      
+    }
+  }
+}
+
+.service-content{
+
+  margin-top: 0px !important;
+
+  background-color: white;
+  padding: 80px 0px;
+  color: @app_black;
+
+  .container{
+    text-align: justify-center;
+    display: none !important;
+   
+    &.active{
+      display: block !important;
+    }
+
+  }  
+
+  ul{
+    padding-left: 0px;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  p{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  position: relative;
+
+  
+  
+}
+
+.row.our-services{
+  margin-bottom: 50px !important;
+}
+
+.blog-section{
+
+  .container{
+
+   overflow: hidden;
+
+    .blog-title{
+      margin: 50px 0px;
+    }
+
+    .featured-image{
+      width: 60%;
+      height: 300px;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+      }
+
+    }
+
+    .blog-body{
+      width: 60%;
+      margin-top: 50px;
+    }
+
+    .read-more-div{
+
+      width: 60%;
+
+      .read-more{
+        display: block;
+        float: right;
+      }
+
+    }    
+
+    .blog-divider{
+
+      height: 10px;
+      width: 60%;
+      background-color: @app_blue;
+      margin-top: 50px;
+      div{
+        background-color: @beige;
+        width: 50%;
+        height: 100%;
+      }
+    }
+
+  }
+
+}
+
+.contact-section{
+  
+  .container{
+    
+    .row{
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      &>div{
+        padding: 50px;
+        h2{
+          color: @app_blue;
+          margin-bottom: 50px;
+        }
+
+        h4{
+          color: @app_blue;
+          margin-bottom: 24px;
+        }
+
+        span{
+          font-weight: bold;
+          color: @beige;
+        }
+
+      }
+
+      .form{
+
+        h2{
+          color: @app_blue;
+        }
+
+        .form-group{
+          input[type="submit"]{
+            display: inline-block;
+            width: 150px;
+          }
+        }
+
+      }
+
+      .address{
+
+        h2{
+          color: @beige;
+        }
+
+      }
+
+    }
+
+  }
+}
+
+.site-divider{
+
+  height: 10px;
+  width: 100%;
+  background-color: @app_blue;
+  margin-top: 50px;
+  div{
+    background-color: @beige;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.see-services{
+  width: 180px;
+  border-radius: 30px;
+  color: white;
+  background-color: @beige;
+  padding: 10px 30px;
+  display: block;
+  margin: auto;
+
+  &:hover{
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    color: white;
+  }
+}
+
+
+.site-footer{
+  background-color: @app_blue;
+  margin-top: 100px;
+  padding: 30px 0px 50px 0px;
+  color: white;
+  border-top: 16px solid @beige;
+
+  p{
+    line-height: 1rem;
+    font-size: small;
+  }
+
+  ul{
+    list-style-type: none;
+    padding-left: 0px;
+
+    li{
+
+      color: white;
+      line-height: 3.0;
+      img{
+        width: 24px;
+        margin-right: 10px;
+      }
+      a{
+        color: white;
+        &:hover{
+          font-weight: bold;
+        }  
+      }
+
+    }
+  }
+}
+
+
+
+.scroll-top{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: @highest-z-index;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: -2px 2px 5px rgba(0,0,0,.2);
+  text-align: center;
+  background-color: white;
+}

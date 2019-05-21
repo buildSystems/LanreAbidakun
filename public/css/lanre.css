@@ -1,0 +1,566 @@
+@font-face {
+  font-family: "Gadugi";
+  src: url('/css/fonts/gadugi.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Gadugi";
+  src: url('/css/fonts/gadugi-bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url('/css/fonts/nunito.woff') format('woff'), url('/css/fonts/nunito.woff2') format('woff2');
+}
+@font-face {
+  font-family: "Nunito";
+  src: url('/css/fonts/nunito-bold.woff') format('woff'), url('/css/fonts/nunito-bold.woff2') format('woff2');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url('/css/fonts/nunito-light.woff') format('woff'), url('/css/fonts/nunito-light.woff2') format('woff2');
+  font-style: normal;
+}
+/*====================================================================================================
+End of imports
+=====================================================================================================*/
+/*=====================================================================================================
+Begin variables
+======================================================================================================*/
+/*====================================================================================================
+End of variables
+=====================================================================================================*/
+/*=====================================================================================================
+Begin extensibles
+======================================================================================================*/
+/*====================================================================================================
+End of extensibles
+=====================================================================================================*/
+body {
+  background-color: white;
+  font-family: "Open sans";
+  color: #585858;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+p,
+a {
+  font-size: 14px;
+}
+p:hover,
+a:hover {
+  text-decoration: none;
+}
+.container {
+  display: block !important;
+  margin: auto !important;
+  padding: 0px !important;
+}
+.navbar {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-top: 4px solid #7b6b38;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+}
+.navbar .container {
+  position: relative;
+}
+.navbar .container .navbar-toggler {
+  position: absolute;
+  right: 0px;
+  top: calc(50% - 25px);
+  font-size: xx-large;
+}
+.navbar .container #main-nav {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .navbar .container #main-nav {
+    display: none;
+  }
+}
+.navbar .container #main-nav .nav-item {
+  margin-left: 16px;
+  font-size: 12px;
+}
+.navbar .container #main-nav .nav-item.active,
+.navbar .container #main-nav .nav-item:hover {
+  border-bottom: 1.5px solid #7b6b38;
+}
+.navbar .container #main-nav .nav-item.active a,
+.navbar .container #main-nav .nav-item:hover a {
+  text-transform: uppercase;
+  color: #7b6b38;
+}
+.navbar .container #main-nav .nav-item a {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.header {
+  idth: 100%;
+  height: 550px;
+  margin-top: 50px;
+  background-size: cover;
+  /*&.basic{
+    background-image: url('/images/basic.jpg');
+    height: 800px !important;
+  }
+
+
+  &.quality{
+    background-image: url('/images/quality.jpg');
+    height: 800px !important;
+  }*/
+}
+.header.home {
+  background-image: url('/images/home_bg.jpg');
+}
+.header.about {
+  background-image: url('/images/bookkeeping.jpg');
+}
+.header.about .container {
+  height: 100%;
+}
+.header.about .container .slidein {
+  background-color: rgba(1, 71, 131, 0.9);
+  color: white;
+  display: block;
+  float: right;
+  padding: 24px;
+  width: 450px;
+  height: 100%;
+}
+.header.about .container .slidein h1 {
+  font-size: 45px;
+}
+.header.about .container .slidein h1:first-child {
+  margin-top: 100px;
+}
+.header.about .container .slidein h1.yellow {
+  color: yellow;
+  position: relative;
+  line-height: 80px;
+  text-align: top;
+}
+.header.about .container .slidein h1.yellow:after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  border-bottom: 2px solid yellow;
+  bottom: 0px;
+  left: 0px;
+}
+.header.about .container .slidein p {
+  font-size: large;
+}
+.header .container .caption {
+  background-color: #014783;
+  color: white;
+  display: block;
+  margin-top: 100px;
+  float: right;
+  padding: 24px;
+  width: 450px;
+}
+.header .container .caption h1 {
+  font-size: 50px;
+}
+.header .container .caption p {
+  font-size: large;
+}
+.header.services {
+  background-image: url('/images/consulting.jpg');
+}
+.header.blog {
+  background-image: url('/images/blog.jpg');
+}
+.header.contact-us {
+  background-image: url('/images/map.jpg');
+}
+section {
+  margin-top: 100px;
+  padding: 0px;
+}
+.about-section .container {
+  height: 250px;
+}
+.about-section .container .row {
+  height: 100%;
+}
+.about-section .container .row div {
+  height: 100%;
+}
+.about-section .container .row div:first-child {
+  overflow: hidden;
+  padding: 0px;
+}
+.about-section .container .row div:first-child img {
+  height: 100%;
+}
+.about-section .container .row div:nth-child(2) {
+  background-color: #7b6b38;
+}
+.about-section .container .row div:nth-child(2) p {
+  text-align: center;
+  line-height: 250px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.about-section .container .row div:last-child {
+  background-image: url('/images/woman-entrepreneur.jpg');
+  background-size: cover;
+  background-position: right;
+  padding: 0px;
+}
+.about-section .container .row div:last-child .blue-screen {
+  width: 50%;
+  height: 100%;
+  background-color: #014783;
+  background-image: none;
+  opacity: 0.7;
+}
+.main-content .container p {
+  padding: 0px;
+  font-size: large;
+  text-align: justify;
+}
+.what-we-do-left {
+  padding: 50px;
+}
+.what-we-do-left h1 {
+  font-size: 45px;
+  color: #014783;
+  margin: 50px 0px;
+}
+.what-we-do-left p {
+  width: 400px;
+  margin-bottom: 50px;
+  font-size: large;
+}
+.what-we-do-left a {
+  padding: 10px 24px;
+  background-color: #7b6b38;
+  color: white;
+  border-radius: 15px;
+}
+.what-we-do-right .row {
+  height: 250px;
+}
+.what-we-do-right .row img {
+  width: 200px;
+  height: 250px;
+  margin: 0px;
+}
+.what-we-do-right .row div {
+  padding: 20px 50px;
+  margin: 0px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 250px;
+}
+.what-we-do-right .row div.experience {
+  background-color: #014783;
+}
+.what-we-do-right .row div.reliable {
+  background-color: #7b6b38;
+}
+.what-we-do-right .row div p {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1em;
+  margin-top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.how-we-help {
+  height: 800px !important;
+}
+.our-services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.our-services .service {
+  width: 20%;
+  margin: 0px 5px;
+  box-sizing: border-box;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+}
+.our-services .service p {
+  text-align: left;
+  font-weight: normal;
+  font--size: small;
+}
+.our-services .service h4 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.our-services .service:hover {
+  -webkit-transform: translateY(-16px);
+  transform: translateY(-16px);
+}
+.mission,
+.how-we-help,
+.service-desc,
+.basic,
+.quality,
+.expertise,
+.cost {
+  width: 100%;
+  height: 600px;
+  background-image: url('/images/business.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+.methodology {
+  width: 100%;
+  height: 700px;
+  background-image: url('/images/business.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+.section-header {
+  background-color: rgba(123, 107, 56, 0.7);
+  padding: 50px 0px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.section-header p {
+  font-size: normal;
+}
+.section-content {
+  background-color: white;
+  padding: 80px 0px;
+  color: #585858;
+  position: relative;
+}
+.section-content p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.section-content .container {
+  text-align: center;
+}
+.section-content .container ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.section-content::before {
+  content: "";
+  border-bottom: 20px solid white;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: calc(50% - 10px);
+  top: -20px;
+}
+.services-section {
+  margin-bottom: 0px !important;
+}
+.services-section .container .row {
+  display: flex;
+  flex-drection: row;
+  flex-wrap: nowrap;
+}
+.services-section .container .row .service-list {
+  padding: 30px 0px;
+  margin: 1px;
+  color: white;
+  text-align: center;
+}
+.services-section .container .row .service-list p {
+  font-size: large;
+  font-weight: bold;
+}
+.services-section .container .row .service-list:hover,
+.services-section .container .row .service-list.active {
+  -webkit-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+}
+.service-content {
+  margin-top: 0px !important;
+  background-color: white;
+  padding: 80px 0px;
+  color: #585858;
+  position: relative;
+}
+.service-content .container {
+  text-align: justify-center;
+  display: none !important;
+}
+.service-content .container.active {
+  display: block !important;
+}
+.service-content ul {
+  padding-left: 0px;
+  text-align: center;
+  list-style-type: none;
+}
+.service-content h1 {
+  text-align: center;
+}
+.service-content p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.row.our-services {
+  margin-bottom: 50px !important;
+}
+.blog-section .container {
+  overflow: hidden;
+}
+.blog-section .container .blog-title {
+  margin: 50px 0px;
+}
+.blog-section .container .featured-image {
+  width: 60%;
+  height: 300px;
+  overflow: hidden;
+}
+.blog-section .container .featured-image img {
+  width: 100%;
+}
+.blog-section .container .blog-body {
+  width: 60%;
+  margin-top: 50px;
+}
+.blog-section .container .read-more-div {
+  width: 60%;
+}
+.blog-section .container .read-more-div .read-more {
+  display: block;
+  float: right;
+}
+.blog-section .container .blog-divider {
+  height: 10px;
+  width: 60%;
+  background-color: #014783;
+  margin-top: 50px;
+}
+.blog-section .container .blog-divider div {
+  background-color: #7b6b38;
+  width: 50%;
+  height: 100%;
+}
+.contact-section .container .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.contact-section .container .row > div {
+  padding: 50px;
+}
+.contact-section .container .row > div h2 {
+  color: #014783;
+  margin-bottom: 50px;
+}
+.contact-section .container .row > div h4 {
+  color: #014783;
+  margin-bottom: 24px;
+}
+.contact-section .container .row > div span {
+  font-weight: bold;
+  color: #7b6b38;
+}
+.contact-section .container .row .form h2 {
+  color: #014783;
+}
+.contact-section .container .row .form .form-group input[type="submit"] {
+  display: inline-block;
+  width: 150px;
+}
+.contact-section .container .row .address h2 {
+  color: #7b6b38;
+}
+.site-divider {
+  height: 10px;
+  width: 100%;
+  background-color: #014783;
+  margin-top: 50px;
+}
+.site-divider div {
+  background-color: #7b6b38;
+  width: 50%;
+  height: 100%;
+}
+.see-services {
+  width: 180px;
+  border-radius: 30px;
+  color: white;
+  background-color: #7b6b38;
+  padding: 10px 30px;
+  display: block;
+  margin: auto;
+}
+.see-services:hover {
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.site-footer {
+  background-color: #014783;
+  margin-top: 100px;
+  padding: 30px 0px 50px 0px;
+  color: white;
+  border-top: 16px solid #7b6b38;
+}
+.site-footer p {
+  line-height: 1rem;
+  font-size: small;
+}
+.site-footer ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.site-footer ul li {
+  color: white;
+  line-height: 3;
+}
+.site-footer ul li img {
+  width: 24px;
+  margin-right: 10px;
+}
+.site-footer ul li a {
+  color: white;
+}
+.site-footer ul li a:hover {
+  font-weight: bold;
+}
+.scroll-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: white;
+}
