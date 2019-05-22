@@ -66,110 +66,55 @@ $(document).ready(function(){
 
 	$('body').scrollspy({target: ".navbar", offset: 500});
 
-	// Add smooth scrolling on all links inside the navbar
-	$("#main-nav a").on('click', function(event) {
+ 	//========================================================================
+	// Relevant for side menu in smaller screens
+	//=======================================================================
 
-	  // Make sure this.hash has a value before overriding default behavior
-	  if (this.hash !== "") {
-	  	console.log("the hash is: " + hash);
+	  //set the heights of the responsive menu to that of the body
+	  $('body').height("100vh");
+	  $("#dark-screen").height($('body').height());
+	  $("#responsive-menu").height($('body').height());
 
-	    // Prevent default anchor click behavior
-	    event.preventDefault();
-
-	    // Store hash
-	    var hash = this.hash;
-
-	    // Using jQuery's animate() method to add smooth page scroll
-	    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-	    
-	    $('html, body').animate({
-	      scrollTop: $(hash).offset().top - 300
-	    }, 800, function(){
-
-	    // Add hash (#) to URL when done scrolling (default click behavior)
-	     //window.location.hash = hash;
-	    });
-
-	  } // End if
-
-	});
-
-	$(".mobile-links .mobile-nav-link a").on('click', function(event) {
-
-	  // Make sure this.hash has a value before overriding default behavior
-	  if (this.hash !== "") {
-	  	console.log("the hash is: " + hash);
-
-	    // Prevent default anchor click behavior
-	    event.preventDefault();
-
-	    // Store hash
-	    var hash = this.hash;
-
-	    // Using jQuery's animate() method to add smooth page scroll
-	    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	  $("#dark-screen").on('click', function(){
 	    hideMobileMenu();
-	    setTimeout($('html, body').animate({
-	      scrollTop: $(hash).offset().top - 100
-	    }, 800), 500);
+	  });
+
+	  $('.navbar-toggler').click(function(){
+	    showMobileMenu();
 	    
+	  });
 
-	  } // End if
 
-	});
+	  //Now for the links behaviour proper
+	  $('.mobile-links > .has-dropdown').on('click', function(){
+	    $($(this).data('target')).toggle('slow');
+	  })
+
+	  $('.mobile-dropdown-link.has-dropdown').on('click', function(){
+	    $(this).find($('.mobile-dropdown-menu')).toggle('slow');
+	  })
+
+	  //also if window is resized...
+	  $(window).resize(function(){
+	    if(window.innerWidth > 768){
+	      var menu = $("#responsive-menu");
+	      if($(menu).css('display') == 'block'){
+	        var width = $(menu).width();
+	        $(menu).animate({left: "-=" + width}, function(){$(menu).css('display', 'none');
+	        $("#dark-screen").hide('fast');});
+	        
+	      }    
+	    }else{
+	      window.location.reload();
+	    }
+    
+    });  
+
+	
 
 	$('.scroll-top').on('click', function(){
 		$('body,html').animate({scrollTop: 0}, "slow");
-	})
-
-
-	//========================================================================
-// Relevant for side menu in smaller screens
-//=======================================================================
-
-  //set the heights of the responsive menu to that of the body
-  $('body').height("100vh");
-  $("#dark-screen").height($('body').height());
-  $("#responsive-menu").height($('body').height());
-
-  $("#dark-screen").on('click', function(){
-    hideMobileMenu();
-  });
-
-  $('.navbar-toggler').click(function(){
-    showMobileMenu();
-    
-  });
-
-
-  //Now for the links behaviour proper
-  $('.mobile-links > .has-dropdown').on('click', function(){
-    $($(this).data('target')).toggle('slow');
-  })
-
-  $('.mobile-dropdown-link.has-dropdown').on('click', function(){
-    $(this).find($('.mobile-dropdown-menu')).toggle('slow');
-  })
-
-  //also if window is resized...
-  $(window).resize(function(){
-    if(window.innerWidth > 768){
-      var menu = $("#responsive-menu");
-      if($(menu).css('display') == 'block'){
-        var width = $(menu).width();
-        $(menu).animate({left: "-=" + width}, function(){$(menu).css('display', 'none');
-        $("#dark-screen").hide('fast');});
-        
-      }    
-    }else{
-      window.location.reload();
-    }
-    
-  });  
-  
-
-  //==========================================================================
-  //=============================================================================
+	});
 
   //=====================================================================================
   // Changing the services in services page
@@ -226,8 +171,8 @@ function displayService(index){
 	console.log('index' + index)
 	$(serviceDescription[index]).addClass('active');
 
-	var description = document.getElementsByClassName('service-desc')[0].getBoundingClientRect().top;
-	$('body,html').animate({scrollTop: (description + window.innerHeight / 3) + "px"}, "slow");
+	var description = document.getElementsByClassName('service-desc')[0];
+	$('body,html').animate({scrollTop: $(description).offset().top - 100 + "px"}, "slow");
 	
 }
 

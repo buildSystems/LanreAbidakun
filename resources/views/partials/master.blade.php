@@ -74,7 +74,7 @@
             <div class="scroll-top hide"><i class="fas fa-angle-up" style="font-size: 1.5em; line-height: 50px;"></i>
             </div>
         </div>
-        <!-- @include('partials.mobile-nav') -->
+        @include('partials.mobile-nav')
         
         <!-- @if(session('success'))
             @include('partials.flash')

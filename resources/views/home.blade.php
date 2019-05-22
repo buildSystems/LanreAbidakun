@@ -34,12 +34,12 @@ Home
 <section class="what-we-do-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 animated what-we-do-left">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 animated what-we-do-left">
 				<h1>What we stand for</h1>
 				<p>
 					A firm of accountants with extensive knowledge and experience in auditing and investigation, taxation receivership and liquidation.
 				</p>
-				<a  href="#" class="read">Read More</a>
+				<a  href="/about" class="read">Read More</a>
 			</div>
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 what-we-do-right">
 				<div class="row">

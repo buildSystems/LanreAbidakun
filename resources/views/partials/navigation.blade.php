@@ -13,8 +13,17 @@
           <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item {{ request()->route()->getName() == 'services' ? 'active' : '' }}">
-          <a class="nav-link" href="/services">Services</a>
+          <a class="nav-link" href="/services">services</a>
         </li>
+        <!-- <li class="nav-item {{ request()->route()->getName() == 'services' ? 'active' : '' }}">
+          <a class="nav-link dropdown-toggle" href="/services" id="services-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>                      
+            <ul class="dropdown-menu" aria-labelledby="services-dropdown">
+              <li class="dropdown-item"><a href="#">Clients</a></li>
+              <li class="dropdown-item"><a href="#">Our Mission</a></li>
+              <li class="dropdown-item"><a href="#">Team</a></li>
+              <li class="dropdown-item"><a href="#">Network</a></li>
+            </ul> 
+        </li> -->
         <li class="nav-item {{ request()->route()->getName() == 'publications' ? 'active' : '' }}">
           <a class="nav-link" href="/publications">Publications</a>
         </li>

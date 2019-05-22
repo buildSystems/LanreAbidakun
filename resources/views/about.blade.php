@@ -32,12 +32,13 @@ About us
 <section class="about-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 laughing-man-div">
 				<img class="animated laughing-man" src="/images/laughing-man.jpg" alt="" />
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 animated about-us-div delay-1s" style="width: 50%;">
+					<p>About us</p>
+				</div>
 			</div>
-			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6 animated about-us-div delay-1s">
-				<p>About us</p>
-			</div>
+			
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 animated lady">
 				<div class="blue-screen animated fadeInRight delay-1s"></div>
 

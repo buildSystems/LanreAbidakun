@@ -57,6 +57,7 @@ Begin extensibles
 @slidein_bottom: #edc8ab;
 @media768: ~"only screen and (max-width: 768px) and (min-width: 320px)";
 @beige: #7b6b38;
+@light: #F9F6F8;
 
 
 .shadow(){
@@ -82,10 +83,19 @@ h1,h2,h3,h4,h5,h6{
 p, a{
 
   font-size: 14px;
+  
   &:hover{
     text-decoration: none;
   }
 
+}
+
+li{
+
+  @media @media768{
+    font-size: 12px;
+  }
+  
 }
 
 .container{
@@ -110,6 +120,15 @@ p, a{
       right: 0px;
       top: calc(50% - 25px);
       font-size: xx-large;
+      border-radius: 5px;
+      line-height: 100%;
+      padding: 10px 10px 0px 10px;
+
+      &:focus{
+        background-color:#eee;
+        border: none;
+      }
+      
     }
 
     #main-nav{
@@ -125,25 +144,71 @@ p, a{
       }
 
       .nav-item{
-        margin-left: 16px;
-        font-size: 12px;
 
-        &.active, &:hover{
-          border-bottom: 1.5px solid @beige;
+          margin-left: 16px;
+          font-size: 12px;
+          position: relative;
+
           a{
-            text-transform: uppercase;
-            color: @beige;
-            
+            text-transform: uppercase;  
+            font-size: 12px; 
           }
 
-        }
+          &.active, &:hover{
+          
+            border-bottom: 1.5px solid @beige;
+            
+            a{
+              text-transform: uppercase;
+              color: @beige;
+              
+            }
 
-        a{
-          text-transform: uppercase;  
-          font-size: 12px; 
-        }
+          }
 
-      }
+          &:hover > .dropdown-menu{
+
+            display: block;
+
+          }
+
+          .dropdown-menu{
+
+            border: none;
+            text-transform: uppercase !important;
+            position: absolute;
+            left: 0px;
+            background-color: @app_blue !important;
+            .shadow;
+
+            li{
+
+              a{
+                color: white !important;
+                &:hover{
+                  font-weight: bold;
+                }
+              }
+
+              &:hover{
+                background-color: @app_blue;
+              }
+
+            }
+
+          }
+
+
+          .nav-link{
+
+            text-transform: uppercase !important;
+            position: relative;
+            
+            
+            
+          }/* End Nav Link */  
+
+        }
      
     }
 
@@ -151,8 +216,11 @@ p, a{
 }
 
 .header{
-  idth: 100%;
+  width: 100%;
   height: 550px;
+  @media @media768{
+    height: 500px;
+  }
   margin-top: 50px;
   background-size: cover;
 
@@ -203,6 +271,9 @@ p, a{
 
         p{
           font-size: large;
+          @media @media768{
+            font-size: medium;
+          }
         }
 
       }
@@ -226,6 +297,9 @@ p, a{
 
       p{
         font-size: large;
+         @media @media768{
+            font-size: medium;
+          }
       }
 
     }
@@ -235,6 +309,7 @@ p, a{
 
   &.services{
     background-image: url('/images/consulting.jpg');
+    background-position: center;
   }
 
   &.blog{
@@ -260,6 +335,9 @@ p, a{
 
 section{
   margin-top: 100px;
+  @media @media768{
+    margin-top: 50px;
+  }
   padding: 0px;
 }
 
@@ -267,7 +345,7 @@ section{
 
   .container{
     height: 250px;
-    
+    overflow: hidden;
     .row{
 
       height: 100%;
@@ -277,27 +355,35 @@ section{
         height: 100%;
       }
 
-      div:first-child{
-        overflow: hidden;
+      .laughing-man-div{
+        position: relative;
         padding: 0px;
         img{
           height: 100%;
         }
-      }
+        .about-us-div{
+          background-color: @beige;
+          box-sizing: border-box;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          p{
+            text-align: center;
+            line-height: 250px;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+             @media @media768{
+              font-size: medium;
+            }
+          }
+        }
+        @media @media768{
 
-
-      div:nth-child(2){
-        background-color: @beige;
-        p{
-          text-align: center;
-          line-height: 250px;
-          font-size: 20px;
-          color: white;
-          font-weight: bold;
         }
       }
 
-      div:last-child{
+      .lady{
         background-image: url('/images/woman-entrepreneur.jpg');
         background-size: cover;
         background-position: right;
@@ -306,9 +392,9 @@ section{
         .blue-screen{
           width: 50%;
           height: 100%;
-          background-color: @app_blue;
+          background-color: fade(@app_blue, 70%);
           background-image: none;
-          opacity: .7;
+          
         }
       }
 
@@ -326,6 +412,10 @@ section{
       padding: 0px;
       font-size: large;
       text-align: justify;
+       @media @media768{
+            font-size: medium;
+            padding: 20px;
+          }
     }
 
   }
@@ -346,6 +436,9 @@ section{
     width: 400px;
     margin-bottom: 50px;
     font-size: large;
+     @media @media768{
+        font-size: medium;
+      }
   }
 
   a{
@@ -360,7 +453,9 @@ section{
 .what-we-do-right{
 
   .row{
+
     height: 250px;
+
     img{
       width: 200px;
       height: 250px;
@@ -381,6 +476,7 @@ section{
       &.reliable{
         background-color: @beige;
       }
+      
       p{
         text-align: center;
         color: white;
@@ -389,15 +485,56 @@ section{
         line-height: 1.0em;
         margin-top: 50%;
         transform: translateY(-50%);
+         @media @media768{
+            font-size: 20px;
+          }
       }
+
     }
-  }
-  
+
+    @media @media768{
+      
+
+      .row{
+        margin: 0px !important;
+        display: block;
+      }
+
+        padding: 0px 50px;
+
+          img{
+            width: 100%;
+            height: 200px;
+            margin: 0px;
+          }
+          div{
+            width: 200px;
+            height: 200px;
+            margin: 0px !important;
+            padding: 0px 30px;
+
+            p{
+
+              text-align: center;
+              color: white;
+              font-size: 20px;
+              font-weight: bold;
+              line-height: 1.5em;
+              margin-top: 100px;
+            }
+        }
+            
+    }
+
+  }  
   
 }
 
 .how-we-help{
   height: 800px !important;
+  @media @media768{
+    height: 1200px !important;
+  }
 }
 
 .our-services{
@@ -405,9 +542,23 @@ section{
   flex-direction: row;
   flex-wrap: nowrap;
   
+  @media @media768{
+    flex-wrap: wrap !important;
+    text-align: center;
+    justify-content: center;
+  }
+  
   .service{
 
+    flex: 1;
     width: 20%;
+    @media @media768{
+      width: 33%;
+      margin-bottom: 20px;
+      li{
+        font-size: 12px;
+      }
+    }
     margin: 0px 5px;
     box-sizing: border-box;
     padding: 12px;
@@ -417,12 +568,15 @@ section{
     p{
       text-align: left;
       font-weight: normal;
-      font--size: small;
+      font-size: small;
     }
 
     h4{
       font-weight: bold;
       font-size: 24px;
+      @media @media768{
+        text-align: left;
+      }
     }
 
     &:hover{
@@ -437,26 +591,41 @@ section{
 .mission, .how-we-help, .service-desc, .basic, .quality, .expertise, .cost{
   width: 100%;
   height: 600px;
+  @media @media768{
+    height: 800px;
+  }
   background-image: url('/images/business.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding-top: 100px;
+  @media @media768{
+    padding-top: 80px;
+  }
 }
 
 .methodology{
   width: 100%;
   height: 700px;
+  @media @media768{
+    height: 1000px;
+  }
   background-image: url('/images/business.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding-top: 100px;
+  @media @media768{
+    padding-top: 80px;
+  }
 }
 
 .section-header{
   background-color: fade(@beige, 70%);
   padding: 50px 0px;
+  @media @media768{
+    padding: 30px 20px;
+  }
   text-align: center;
   color: white;
       
@@ -470,6 +639,9 @@ section{
 
   background-color: white;
   padding: 80px 0px;
+  @media @media768{
+    padding: 50px 20px;
+  }
   color: @app_black;
 
 
@@ -591,6 +763,9 @@ section{
 
     .featured-image{
       width: 60%;
+      @media @media768{
+        width: 100%;
+      }
       height: 300px;
       overflow: hidden;
 
@@ -602,12 +777,20 @@ section{
 
     .blog-body{
       width: 60%;
+      @media @media768{
+        width: 100%;
+        padding: 0px 20px;
+      }
       margin-top: 50px;
     }
 
     .read-more-div{
 
       width: 60%;
+      @media @media768{
+        width: 100%;
+        padding: 0px 20px;
+      }
 
       .read-more{
         display: block;
@@ -620,8 +803,12 @@ section{
 
       height: 10px;
       width: 60%;
+      @media @media768{
+        width: 100%;
+      }
       background-color: @app_blue;
       margin-top: 50px;
+      
       div{
         background-color: @beige;
         width: 50%;
@@ -641,6 +828,9 @@ section{
 
       display: flex;
       flex-direction: row;
+      @media @media768{
+        flex-direction: column;
+      }
       flex-wrap: nowrap;
 
       &>div{
@@ -723,9 +913,18 @@ section{
 .site-footer{
   background-color: @app_blue;
   margin-top: 100px;
-  padding: 30px 0px 50px 0px;
-  color: white;
+  padding: 30px 0px 50px 0px;  
   border-top: 16px solid @beige;
+  color: white;
+  
+  @media @media768{
+    text-align: center;
+    .social{
+        text-align: left !important;
+        width: 120px;
+        margin-left: calc(50% - 60px);
+      }
+  }
 
   p{
     line-height: 1rem;
@@ -751,10 +950,100 @@ section{
         }  
       }
 
+
+
+    }
+  }
+
+  @media @media768{
+    padding: 30px 20px 50px 20px;
+    color: white;
+
+    ul{
+      list-style-type: none;
+      padding-left: 0px;
+
+      li{
+
+        color: white;
+        line-height: 2.0;
+        img{
+          width: 24px;
+          margin-right: 10px;
+        }
+        a{
+          color: white;
+          &:hover{
+            font-weight: bold;
+          }  
+        }
+
+      }
     }
   }
 }
 
+#dark-screen{
+
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  z-index: 100000;
+  background-color: rgba(0,0,0,.5);
+  display: none;
+}
+
+#responsive-menu{
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  left: -70%;
+  width: 70%;
+  z-index: 100001;
+  background-color: white;
+
+  #menu-logo{
+    background-color: @light;
+    padding: 24px 16px;
+    border-bottom: 2px solid @app_blue;
+    img{
+      margin-left: 20px;
+    }    
+  }
+
+  #mobile-menu{
+
+    padding: 24px 24px 24px 0px;
+
+    .mobile-links{
+      list-style-type: none;
+      padding-left: 16px;
+      li{
+        line-height: 2rem;
+        width: 100%;
+        padding-left: 24px;
+
+        a{
+          color: @app_blue;
+          font-weight: bold;
+          &:hover{
+            text-decoration: none;
+            color: darken(@app_blue, 20%);
+          }
+        }
+
+        &.active{
+          background-color: #eee;
+          a{
+            color: @app_black;
+          }
+        }
+      }
+    }
+  }
+  
+}
 
 
 .scroll-top{

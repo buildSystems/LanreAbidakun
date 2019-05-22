@@ -57,6 +57,11 @@ p:hover,
 a:hover {
   text-decoration: none;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  li {
+    font-size: 12px;
+  }
+}
 .container {
   display: block !important;
   margin: auto !important;
@@ -78,6 +83,13 @@ a:hover {
   right: 0px;
   top: calc(50% - 25px);
   font-size: xx-large;
+  border-radius: 5px;
+  line-height: 100%;
+  padding: 10px 10px 0px 10px;
+}
+.navbar .container .navbar-toggler:focus {
+  background-color: #eee;
+  border: none;
 }
 .navbar .container #main-nav {
   position: absolute;
@@ -95,6 +107,12 @@ a:hover {
 .navbar .container #main-nav .nav-item {
   margin-left: 16px;
   font-size: 12px;
+  position: relative;
+  /* End Nav Link */
+}
+.navbar .container #main-nav .nav-item a {
+  text-transform: uppercase;
+  font-size: 12px;
 }
 .navbar .container #main-nav .nav-item.active,
 .navbar .container #main-nav .nav-item:hover {
@@ -105,12 +123,32 @@ a:hover {
   text-transform: uppercase;
   color: #7b6b38;
 }
-.navbar .container #main-nav .nav-item a {
-  text-transform: uppercase;
-  font-size: 12px;
+.navbar .container #main-nav .nav-item:hover > .dropdown-menu {
+  display: block;
+}
+.navbar .container #main-nav .nav-item .dropdown-menu {
+  border: none;
+  text-transform: uppercase !important;
+  position: absolute;
+  left: 0px;
+  background-color: #014783 !important;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar .container #main-nav .nav-item .dropdown-menu li a {
+  color: white !important;
+}
+.navbar .container #main-nav .nav-item .dropdown-menu li a:hover {
+  font-weight: bold;
+}
+.navbar .container #main-nav .nav-item .dropdown-menu li:hover {
+  background-color: #014783;
+}
+.navbar .container #main-nav .nav-item .nav-link {
+  text-transform: uppercase !important;
+  position: relative;
 }
 .header {
-  idth: 100%;
+  width: 100%;
   height: 550px;
   margin-top: 50px;
   background-size: cover;
@@ -124,6 +162,11 @@ a:hover {
     background-image: url('/images/quality.jpg');
     height: 800px !important;
   }*/
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .header {
+    height: 500px;
+  }
 }
 .header.home {
   background-image: url('/images/home_bg.jpg');
@@ -167,6 +210,11 @@ a:hover {
 .header.about .container .slidein p {
   font-size: large;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .header.about .container .slidein p {
+    font-size: medium;
+  }
+}
 .header .container .caption {
   background-color: #014783;
   color: white;
@@ -182,8 +230,14 @@ a:hover {
 .header .container .caption p {
   font-size: large;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .header .container .caption p {
+    font-size: medium;
+  }
+}
 .header.services {
   background-image: url('/images/consulting.jpg');
+  background-position: center;
 }
 .header.blog {
   background-image: url('/images/blog.jpg');
@@ -195,8 +249,14 @@ section {
   margin-top: 100px;
   padding: 0px;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  section {
+    margin-top: 50px;
+  }
+}
 .about-section .container {
   height: 250px;
+  overflow: hidden;
 }
 .about-section .container .row {
   height: 100%;
@@ -204,40 +264,54 @@ section {
 .about-section .container .row div {
   height: 100%;
 }
-.about-section .container .row div:first-child {
-  overflow: hidden;
+.about-section .container .row .laughing-man-div {
+  position: relative;
   padding: 0px;
 }
-.about-section .container .row div:first-child img {
+.about-section .container .row .laughing-man-div img {
   height: 100%;
 }
-.about-section .container .row div:nth-child(2) {
+.about-section .container .row .laughing-man-div .about-us-div {
   background-color: #7b6b38;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
-.about-section .container .row div:nth-child(2) p {
+.about-section .container .row .laughing-man-div .about-us-div p {
   text-align: center;
   line-height: 250px;
   font-size: 20px;
   color: white;
   font-weight: bold;
 }
-.about-section .container .row div:last-child {
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .about-section .container .row .laughing-man-div .about-us-div p {
+    font-size: medium;
+  }
+}
+.about-section .container .row .lady {
   background-image: url('/images/woman-entrepreneur.jpg');
   background-size: cover;
   background-position: right;
   padding: 0px;
 }
-.about-section .container .row div:last-child .blue-screen {
+.about-section .container .row .lady .blue-screen {
   width: 50%;
   height: 100%;
-  background-color: #014783;
+  background-color: rgba(1, 71, 131, 0.7);
   background-image: none;
-  opacity: 0.7;
 }
 .main-content .container p {
   padding: 0px;
   font-size: large;
   text-align: justify;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .main-content .container p {
+    font-size: medium;
+    padding: 20px;
+  }
 }
 .what-we-do-left {
   padding: 50px;
@@ -251,6 +325,11 @@ section {
   width: 400px;
   margin-bottom: 50px;
   font-size: large;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .what-we-do-left p {
+    font-size: medium;
+  }
 }
 .what-we-do-left a {
   padding: 10px 24px;
@@ -289,15 +368,61 @@ section {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .what-we-do-right .row div p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .what-we-do-right .row {
+    padding: 0px 50px;
+  }
+  .what-we-do-right .row .row {
+    margin: 0px !important;
+    display: block;
+  }
+  .what-we-do-right .row img {
+    width: 100%;
+    height: 200px;
+    margin: 0px;
+  }
+  .what-we-do-right .row div {
+    width: 200px;
+    height: 200px;
+    margin: 0px !important;
+    padding: 0px 30px;
+  }
+  .what-we-do-right .row div p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-top: 100px;
+  }
+}
 .how-we-help {
   height: 800px !important;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .how-we-help {
+    height: 1200px !important;
+  }
 }
 .our-services {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .our-services {
+    flex-wrap: wrap !important;
+    text-align: center;
+    justify-content: center;
+  }
+}
 .our-services .service {
+  flex: 1;
   width: 20%;
   margin: 0px 5px;
   box-sizing: border-box;
@@ -305,14 +430,28 @@ section {
   color: white;
   cursor: pointer;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .our-services .service {
+    width: 33%;
+    margin-bottom: 20px;
+  }
+  .our-services .service li {
+    font-size: 12px;
+  }
+}
 .our-services .service p {
   text-align: left;
   font-weight: normal;
-  font--size: small;
+  font-size: small;
 }
 .our-services .service h4 {
   font-weight: bold;
   font-size: 24px;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .our-services .service h4 {
+    text-align: left;
+  }
 }
 .our-services .service:hover {
   -webkit-transform: translateY(-16px);
@@ -333,6 +472,28 @@ section {
   background-attachment: fixed;
   padding-top: 100px;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .mission,
+  .how-we-help,
+  .service-desc,
+  .basic,
+  .quality,
+  .expertise,
+  .cost {
+    height: 800px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .mission,
+  .how-we-help,
+  .service-desc,
+  .basic,
+  .quality,
+  .expertise,
+  .cost {
+    padding-top: 80px;
+  }
+}
 .methodology {
   width: 100%;
   height: 700px;
@@ -342,12 +503,27 @@ section {
   background-attachment: fixed;
   padding-top: 100px;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .methodology {
+    height: 1000px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .methodology {
+    padding-top: 80px;
+  }
+}
 .section-header {
   background-color: rgba(123, 107, 56, 0.7);
   padding: 50px 0px;
   text-align: center;
   color: white;
   font-weight: bold;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .section-header {
+    padding: 30px 20px;
+  }
 }
 .section-header p {
   font-size: normal;
@@ -357,6 +533,11 @@ section {
   padding: 80px 0px;
   color: #585858;
   position: relative;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .section-content {
+    padding: 50px 20px;
+  }
 }
 .section-content p {
   font-size: 16px;
@@ -443,6 +624,11 @@ section {
   height: 300px;
   overflow: hidden;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .blog-section .container .featured-image {
+    width: 100%;
+  }
+}
 .blog-section .container .featured-image img {
   width: 100%;
 }
@@ -450,8 +636,20 @@ section {
   width: 60%;
   margin-top: 50px;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .blog-section .container .blog-body {
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
 .blog-section .container .read-more-div {
   width: 60%;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .blog-section .container .read-more-div {
+    width: 100%;
+    padding: 0px 20px;
+  }
 }
 .blog-section .container .read-more-div .read-more {
   display: block;
@@ -463,6 +661,11 @@ section {
   background-color: #014783;
   margin-top: 50px;
 }
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .blog-section .container .blog-divider {
+    width: 100%;
+  }
+}
 .blog-section .container .blog-divider div {
   background-color: #7b6b38;
   width: 50%;
@@ -472,6 +675,11 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .contact-section .container .row {
+    flex-direction: column;
+  }
 }
 .contact-section .container .row > div {
   padding: 50px;
@@ -527,8 +735,18 @@ section {
   background-color: #014783;
   margin-top: 100px;
   padding: 30px 0px 50px 0px;
-  color: white;
   border-top: 16px solid #7b6b38;
+  color: white;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .site-footer {
+    text-align: center;
+  }
+  .site-footer .social {
+    text-align: left !important;
+    width: 120px;
+    margin-left: calc(50% - 60px);
+  }
 }
 .site-footer p {
   line-height: 1rem;
@@ -551,6 +769,82 @@ section {
 }
 .site-footer ul li a:hover {
   font-weight: bold;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .site-footer {
+    padding: 30px 20px 50px 20px;
+    color: white;
+  }
+  .site-footer ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+  .site-footer ul li {
+    color: white;
+    line-height: 2;
+  }
+  .site-footer ul li img {
+    width: 24px;
+    margin-right: 10px;
+  }
+  .site-footer ul li a {
+    color: white;
+  }
+  .site-footer ul li a:hover {
+    font-weight: bold;
+  }
+}
+#dark-screen {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+#responsive-menu {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  left: -70%;
+  width: 70%;
+  z-index: 100001;
+  background-color: white;
+}
+#responsive-menu #menu-logo {
+  background-color: #F9F6F8;
+  padding: 24px 16px;
+  border-bottom: 2px solid #014783;
+}
+#responsive-menu #menu-logo img {
+  margin-left: 20px;
+}
+#responsive-menu #mobile-menu {
+  padding: 24px 24px 24px 0px;
+}
+#responsive-menu #mobile-menu .mobile-links {
+  list-style-type: none;
+  padding-left: 16px;
+}
+#responsive-menu #mobile-menu .mobile-links li {
+  line-height: 2rem;
+  width: 100%;
+  padding-left: 24px;
+}
+#responsive-menu #mobile-menu .mobile-links li a {
+  color: #014783;
+  font-weight: bold;
+}
+#responsive-menu #mobile-menu .mobile-links li a:hover {
+  text-decoration: none;
+  color: #00101e;
+}
+#responsive-menu #mobile-menu .mobile-links li.active {
+  background-color: #eee;
+}
+#responsive-menu #mobile-menu .mobile-links li.active a {
+  color: #585858;
 }
 .scroll-top {
   position: fixed;

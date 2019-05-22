@@ -20,9 +20,10 @@
 				<p>Copyright | Lanre Abidakun &amp; Co. 2019 | All Rights Reserved</p>
 
 			</div>
-			<div class="col-xl-3 col-lg-3 col-m3-6 col-sm-6">
+			
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
 				<h4>Follow Us</h4>
-				<ul>
+				<ul class="social">
 					<li><a href="https://facebook.com"><img src="/images/social/facebook.png" alt="facebook logo" /> Facebook</a></li>
 					<li><a href="https://linkedin.com"><img src="/images/social/linkedin.png" alt="linkedin logo" /> Linkedin</a></li>
 					<li><a href="https://twitter.com"><img src="/images/social/twitter.png" alt="twitter logo" /> Twitter</a></li>				
@@ -32,7 +33,7 @@
 
 			</div>
 
-			<div class="col-xl-3 col-lg-3 col-m3-6 col-sm-6">
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
 				<h4>Quick Links</h4>
 
 				<ul>
@@ -45,8 +46,7 @@
 				</ul>
 
 			</div>
-
-
+			
 		</div>
 
 	</div>
