@@ -13,7 +13,7 @@
           <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item {{ request()->route()->getName() == 'services' ? 'active' : '' }}">
-          <a class="nav-link" href="/services">services</a>
+          <a class="nav-link" href="/services">Services</a>
         </li>
         <!-- <li class="nav-item {{ request()->route()->getName() == 'services' ? 'active' : '' }}">
           <a class="nav-link dropdown-toggle" href="/services" id="services-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>                      
