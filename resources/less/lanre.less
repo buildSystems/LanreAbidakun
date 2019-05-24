@@ -26,17 +26,17 @@
 }
 
 @font-face{
-  font-family: "Open Sans";
-  src: url('/css/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-family: "OpenSans";
+  src: url('/css/fonts/OpenSans-Light.ttf') format('truetype');
   font-style: normal;
 }
 @font-face{
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   src: url('/css/fonts/OpenSans-Italic.ttf') format('truetype');
   font-style: italic;
 }
 @font-face{
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   src: url('/css/fonts/OpenSans-Bold.ttf') format('truetype');
   font-style: bold;
 }
@@ -88,7 +88,7 @@ End of extensibles
 body{
 
   background-color: white;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   color:@app_black;
   
 }
@@ -242,12 +242,12 @@ li{
   margin-top: 50px;
   background-size: cover;
 
-  &.home{
-    background-image: url('/images/home_bg.jpg');
-  }
   &.about{
+    background-image: url('/images/meeting.jpg');
+  }
+  &.home{
     
-    background-image: url('/images/bookkeeping.jpg');
+    background-image: url('/images/unnamed.jpg');
     
     
     .container{
@@ -326,7 +326,7 @@ li{
   } 
 
   &.services{
-    background-image: url('/images/consulting.jpg');
+    background-image: url('/images/services.jpg');
     background-position: center;
   }
 
@@ -335,6 +335,11 @@ li{
   }
 
   &.contact-us{
+    background-image: url('/images/contact-us.jpg');
+    background-position: right;
+  }
+
+   &.map{
     background-image: url('/images/map.jpg');
   }
 
@@ -383,6 +388,7 @@ section{
           background-color: @beige;
           box-sizing: border-box;
           position: absolute;
+          width: 50%;
           right: 0px;
           top: 0px;
           p{
@@ -420,6 +426,10 @@ section{
 
   }
   
+}
+
+.hide{
+  display: none;
 }
 
 .main-content{

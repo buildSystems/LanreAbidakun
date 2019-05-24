@@ -12,7 +12,7 @@ Home
 
 @section('content')
 
-<section class="header about">
+<section class="header home">
 
 	<div class="container">
 
@@ -43,7 +43,7 @@ Home
 			</div>
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 what-we-do-right">
 				<div class="row">
-					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div " style="background-image: url('/images/accounting.jpg'); background-size: cover;"></div>
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div " style="background-image: url('/images/office-assistant.jpg'); background-size: cover;"></div>
 					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div  experience" >
 						<p>Great Experience with Us</p>
 					</div>
@@ -52,7 +52,7 @@ Home
 					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div  reliable" >
 						<p>We are Absolutely Reliable</p>
 					</div>
-					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div " style="background-image: url('/images/laughing-man.jpg'); background-size: cover;"></div>
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div " style="background-image: url('/images/employer.jpg'); background-size: cover;"></div>
 				</div>				
 			</div>
 

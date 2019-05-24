@@ -15,6 +15,16 @@ Services
 
 <section class="header services">
 
+	<div class="container">
+
+		<div class="caption animated slideInRight">
+
+			<h1><b>Our Services</b></h1>
+
+		</div>
+
+	</div>	
+
 </section>
 
 <section class="services-section">

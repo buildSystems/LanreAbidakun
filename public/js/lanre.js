@@ -34,10 +34,22 @@ function showMobileMenu(){
     $('html,body').animate({scrollTop: "0px"}, "fast");
 }
 
+function resolveNavAppearance(){
+  if($(window).scrollTop() >= $('#main-nav').outerHeight()){
+    if($('.scroll-top').hasClass('hide'))
+        $('.scroll-top').removeClass('hide');
+        
+    }else{
+        if(! $('.scroll-top').hasClass('hide'))
+          $('.scroll-top').addClass('hide');
+        
+    }  
+}
+
 $(document).ready(function(){
 
 	//adjustNavbar();
-
+	resolveNavAppearance();
 	//green screen should have the same height as main element
 	var mainHeight = $("main").height();
 	console.log(mainHeight);
@@ -47,6 +59,7 @@ $(document).ready(function(){
 
 	window.addEventListener('scroll', function(){
 		//adjustNavbar();
+		resolveNavAppearance();
 		addAnimation("what-we-do-left", "fadeInRight");
 		addAnimation("what-we-do-right-div", "zoomIn");
 		addAnimation("how-we-help", "slideInUp");

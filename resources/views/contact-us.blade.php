@@ -15,7 +15,19 @@ Contact us
 
 <section class="header contact-us">
 
-	
+	<div class="container">
+
+		<div class="caption animated slideInRight">
+
+			<h1><b>Contact Us</b></h1>
+
+		</div>
+
+	</div>	
+
+</section>
+
+<section class="header map">	
 
 </section>
 
@@ -58,14 +70,18 @@ Contact us
 
 				<h2>Locate Us</h2>
 
-				<h4>Abuja</h4>
-				<p>House 90, 693 Road, Off 69 Road, (Hamza Zayyad Close) Model City, Gwarinpa </p>
+				<h4>Abuja Office</h4>
+				<p>Suite 05 &amp; 06, Third Floor, BARAQA MALL Muhammad Sanusi Street, 69 Road, 6th Avenue, Gwarimpa, Abuja.</p>
 				<p><span>Telephone: </span>+234-803 314 6703</p>
-
-				
-				<h4>Lagos</h4>
-				<p>All Season Place Suite 220, 74 Isheri Road, Beside Federal Road Safety Corps, Ojodu, Ikeja</p>
+				<br>
+				<h4>Lagos Office</h4>
+				<p>All Season Palace Suite 220, 74 Isheri Road, beside Federal Road Safety Corps, Ojodu, Ikeja</p>
 				<p><span>Telephone: </span>+234-803 314 6703</p>
+				<br>
+				<h4>UK Office</h4>
+				<p>13 Bednal Avenue Miles Platting M40 8DW Manchester UK</p>
+				<p><span>Telephone: </span>+44-7405 590 116</p>
+				<br>
 
 			</div>
 

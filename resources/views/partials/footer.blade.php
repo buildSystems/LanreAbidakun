@@ -9,13 +9,17 @@
 				<h4>Lanre Abidakun &amp; Co.</h4>
 				<p><i>chartered accountants</i></p>
 				<br>
-				<p><b>Abuja</b></p>
+				<p><b>Abuja Office</b></p>
 				<p>Suite 05 &amp; 06, Third Floor, BARAQA MALL Muhammad Sanusi Street, 69 Road, 6th Avenue, Gwarimpa, Abuja.</p>
 				<p>+234-803 314 6703</p>
 				<br>
-				<p><b>Lagos</b></p>
+				<p><b>Lagos Office</b></p>
 				<p>All Season Palace Suite 220, 74 Isheri Road, beside Federal Road Safety Corps, Ojodu, Ikeja</p>
 				<p>+234-803 314 6703</p>
+				<br>
+				<p><b>UK Office</b></p>
+				<p>13 Bednal Avenue Miles Platting M40 8DW Manchester UK</p>
+				<p>+44-7405 590 116</p>
 				<br>
 				<p>Copyright | Lanre Abidakun &amp; Co. 2019 | All Rights Reserved</p>
 

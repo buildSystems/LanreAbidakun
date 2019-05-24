@@ -13,7 +13,7 @@ About us
 
 @section('content')
 
-<section class="header home">
+<section class="header about">
 
 	<div class="container">
 
@@ -34,7 +34,7 @@ About us
 		<div class="row">
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 laughing-man-div">
 				<img class="animated laughing-man" src="/images/laughing-man.jpg" alt="" />
-				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 animated about-us-div delay-1s" style="width: 50%;">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-3 col-xs-3 animated about-us-div delay-1s" >
 					<p>About us</p>
 				</div>
 			</div>
