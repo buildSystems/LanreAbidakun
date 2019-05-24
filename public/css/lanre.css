@@ -21,6 +21,21 @@
   src: url('/css/fonts/nunito-light.woff') format('woff'), url('/css/fonts/nunito-light.woff2') format('woff2');
   font-style: normal;
 }
+@font-face {
+  font-family: "Open Sans";
+  src: url('/css/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url('/css/fonts/OpenSans-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url('/css/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-style: bold;
+}
 /*====================================================================================================
 End of imports
 =====================================================================================================*/
@@ -38,7 +53,7 @@ End of extensibles
 =====================================================================================================*/
 body {
   background-color: white;
-  font-family: "Open sans";
+  font-family: "Open Sans";
   color: #585858;
 }
 h1,
@@ -72,6 +87,7 @@ a:hover {
   border-top: 4px solid #7b6b38;
   width: 100%;
   position: fixed;
+  top: 0px !important;
   z-index: 9999;
   background-color: white;
 }

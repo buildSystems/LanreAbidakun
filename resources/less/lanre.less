@@ -25,6 +25,23 @@
   font-style: normal;
 }
 
+@font-face{
+  font-family: "Open Sans";
+  src: url('/css/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+@font-face{
+  font-family: "Open Sans";
+  src: url('/css/fonts/OpenSans-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+@font-face{
+  font-family: "Open Sans";
+  src: url('/css/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-style: bold;
+}
+
+
 /*====================================================================================================
 End of imports
 =====================================================================================================*/
@@ -71,7 +88,7 @@ End of extensibles
 body{
 
   background-color: white;
-  font-family: "Open sans";
+  font-family: "Open Sans";
   color:@app_black;
   
 }
@@ -109,6 +126,7 @@ li{
   border-top: 4px solid @beige;
   width: 100%;
   position: fixed;
+  top: 0px !important;
   z-index: @highest-z-index;
   background-color: white;
 

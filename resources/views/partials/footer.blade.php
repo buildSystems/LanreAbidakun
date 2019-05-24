@@ -10,7 +10,7 @@
 				<p><i>chartered accountants</i></p>
 				<br>
 				<p><b>Abuja</b></p>
-				<p>House 90 693 road, off 69, (Hamza Zayyad Close) Model City, Gwarinpa</p>
+				<p>Suite 05 &amp; 06, Third Floor, BARAQA MALL Muhammad Sanusi Street, 69 Road, 6th Avenue, Gwarimpa, Abuja.</p>
 				<p>+234-803 314 6703</p>
 				<br>
 				<p><b>Lagos</b></p>
