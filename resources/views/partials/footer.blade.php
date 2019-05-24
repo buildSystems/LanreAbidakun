@@ -21,8 +21,7 @@
 				<p>13 Bednal Avenue Miles Platting M40 8DW Manchester UK</p>
 				<p>+44-7405 590 116</p>
 				<br>
-				<p>Copyright | Lanre Abidakun &amp; Co. 2019 | All Rights Reserved</p>
-
+			
 			</div>
 			
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
@@ -52,6 +51,8 @@
 			</div>
 			
 		</div>
+
+		<div class="copyright"><p>Copyright | Lanre Abidakun &amp; Co. 2019 | All Rights Reserved</p></div>
 
 	</div>
 

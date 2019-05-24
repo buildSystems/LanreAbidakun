@@ -483,6 +483,7 @@ section{
   .row{
 
     height: 250px;
+    
 
     img{
       width: 200px;
@@ -519,15 +520,17 @@ section{
       }
 
     }
+    }
 
     @media @media768{
       
 
       .row{
-        margin: 0px !important;
-        display: block;
-      }
-
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      
         padding: 0px 50px;
 
           img{
@@ -539,7 +542,7 @@ section{
             width: 200px;
             height: 200px;
             margin: 0px !important;
-            padding: 0px 30px;
+            padding: 0px !important;
 
             p{
 
@@ -556,6 +559,12 @@ section{
 
   }  
   
+}
+
+.copyright{
+  font-size: 6px !important;
+  text-align: center;
+  margin: 50px 0px;
 }
 
 .how-we-help{
@@ -594,7 +603,7 @@ section{
     cursor: pointer;
 
     p{
-      text-align: left;
+      text-align: center;
       font-weight: normal;
       font-size: small;
     }

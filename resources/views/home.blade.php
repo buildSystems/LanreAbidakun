@@ -78,9 +78,9 @@ Home
 				<div class="service animated zoomIn" style="background-color: #014783">
 					<h4>Tax</h4>
 					<p>
-						- Tax planning<br>
-						- Tax Computations<br>
-						- Tax assessments 
+						 Tax planning<br>
+						 Tax Computations<br>
+						 Tax assessments 
 
 					</p>
 					
@@ -88,9 +88,9 @@ Home
 				<div class="service animated zoomIn" style="background-color: #248AC4">
 					<h4>Audit</h4>
 					<p>
-						- Private Audits<br>
-						- Management Audit<br>
-						- Pension Fund Audit<br>
+						 Private Audits<br>
+						 Management Audit<br>
+						 Pension Fund Audit<br>
 						
 					</p>					
 					
@@ -98,9 +98,9 @@ Home
 				<div class="service animated zoomIn" style="background-color: #847546;">
 					<h4>Business Solution</h4>
 					<p>
-						- Manpower Selection<br>
-						- Technical Manpower<br>
-						- Staff Training<br>
+						 Manpower Selection<br>
+						 Technical Manpower<br>
+						 Staff Training<br>
 					
 					</p>
 					
@@ -108,20 +108,20 @@ Home
 				<div class="service animated zoomIn" style="background-color: #AE8F31;">
 					<h4>Risk</h4>
 					<p>
-						- Risk Analysis<br>
-						- Investment Analysis<br>
-						- Corporate Governance<br>
-						- Production Planning
+						 Risk Analysis<br>
+						 Investment Analysis<br>
+						 Corporate Governance<br>
+						 Production Planning
 					</p>
 					
 				</div>
 				<div class="service animated zoomIn" style="background-color: #014783;">
 					<h4>Financial Advisory</h4>
 					<p>
-						- Acquisitions &amp; Mergers<br>
-						- Project Financing<br>
-						- Ailing Projects<br>
-						- Profitability Planning
+						 Acquisitions &amp; Mergers<br>
+						 Project Financing<br>
+						 Ailing Projects<br>
+						 Profitability Planning
 					</p>
 					
 				</div>				

@@ -399,11 +399,11 @@ section {
 }
 @media only screen and (max-width: 768px) and (min-width: 320px) {
   .what-we-do-right .row {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     padding: 0px 50px;
-  }
-  .what-we-do-right .row .row {
-    margin: 0px !important;
-    display: block;
   }
   .what-we-do-right .row img {
     width: 100%;
@@ -414,7 +414,7 @@ section {
     width: 200px;
     height: 200px;
     margin: 0px !important;
-    padding: 0px 30px;
+    padding: 0px !important;
   }
   .what-we-do-right .row div p {
     text-align: center;
@@ -424,6 +424,11 @@ section {
     line-height: 1.5em;
     margin-top: 100px;
   }
+}
+.copyright {
+  font-size: 6px !important;
+  text-align: center;
+  margin: 50px 0px;
 }
 .how-we-help {
   height: 800px !important;
@@ -464,7 +469,7 @@ section {
   }
 }
 .our-services .service p {
-  text-align: left;
+  text-align: center;
   font-weight: normal;
   font-size: small;
 }
