@@ -69,6 +69,7 @@ Begin extensibles
 @screen: #72d623;
 @dark_green: #0d5013;
 @app_blue: #014783;
+@active_blue: #22498B;
 @app_black:  #585858;
 @slidein: #272b44;
 @slidein_bottom: #edc8ab;
@@ -247,55 +248,14 @@ li{
   }
   &.home{
     
-    background-image: url('/images/unnamed.jpg');
-    
+    background-image: url('/images/unnamed.jpg');    
     
     .container{
       
-      height: 100%;
+      height: 100%;     
       
-      .slidein{
-        
-        background-color: fade(@app_blue, 90%);
-        color: white;
-        display: block;
-        float: right;
-        padding: 24px;
-        width: 450px;
-        height: 100%;
-
-        h1{
-          font-size: 45px;
-          &:first-child{
-            margin-top: 100px;
-          }
-          &.yellow{
-            color: yellow;
-            position: relative;
-            line-height: 80px;
-            text-align: top;
-
-            &:after{
-              content: "";
-              position: absolute;
-              width: 40%;
-              height: 2px;
-              border-bottom: 2px solid yellow;
-              bottom: 0px;
-              left: 0px;
-            }
-          }
-        }
-
-        p{
-          font-size: large;
-          @media @media768{
-            font-size: medium;
-          }
-        }
-
-      }
     }
+
   }
 
   .container{
@@ -356,6 +316,48 @@ li{
 
 }
 
+.slidein{
+        
+  background-color: fade(@app_blue, 90%);
+  color: white;
+  display: block;
+  float: right;
+  padding: 24px;
+  width: 450px;
+  height: 100%;
+
+  h1{
+    font-size: 45px;
+    &:first-child{
+      margin-top: 100px;
+    }
+    &.yellow{
+      color: yellow;
+      position: relative;
+      line-height: 80px;
+      text-align: top;
+
+      &:after{
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        border-bottom: 2px solid yellow;
+        bottom: 0px;
+        left: 0px;
+      }
+    }
+  }
+
+  p{
+    font-size: large;
+    @media @media768{
+      font-size: medium;
+    }
+  }
+
+}
+
 section{
   margin-top: 100px;
   @media @media768{
@@ -408,7 +410,7 @@ section{
       }
 
       .lady{
-        background-image: url('/images/woman-entrepreneur.jpg');
+        background-image: url('/images/lanre_team_2.jpg');
         background-size: cover;
         background-position: right;
         padding: 0px;
@@ -1080,6 +1082,113 @@ section{
     }
   }
   
+}
+
+.slide-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  @media @media768{
+     flex-direction: column;
+    }
+  justify-content: center;
+
+  .member-description{
+    width: 50%;
+    @media @media768{
+      width: 90%;
+      text-align: center;
+      order: 2;
+    }
+    text-align: justify;
+    margin-left: 20px;
+    
+    p{
+      font-size: 14px;
+    }
+  }
+
+  .team-member{
+    flex: 0 0 auto;
+    width: 50%;
+    @media @media768{
+      width: 100%;
+    }
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 50px;
+
+    img{
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding: 5px;
+      border: 2px solid @active_blue;
+    }
+
+    &:hover{
+      img{
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+      }
+    }
+    .team-member-details{
+      padding: 20px;
+      background-color: white;
+      color: @active_blue;
+      height: 100px;
+
+      a{
+
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: white;
+        border: 2px solid white;
+        text-transform: uppercase;
+        text-decoration: none;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        transition: width 0.5s, height 0.5s, transform 0.5s;
+
+        &:hover{
+          text-decoration: none;
+          background-color: white;
+          color: @active_blue;
+
+        }
+      }
+
+      &:hover{
+        a{
+          display: inline-block;
+          -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+          
+        }
+
+        h5{
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+          
+        }
+
+        p{
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+          
+        }
+      }
+    }
+
+  }
 }
 
 

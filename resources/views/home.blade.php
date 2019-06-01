@@ -52,7 +52,7 @@ Home
 					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div  reliable" >
 						<p>We are Absolutely Reliable</p>
 					</div>
-					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div " style="background-image: url('/images/employer.jpg'); background-size: cover;"></div>
+					<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 animated what-we-do-right-div " style="background-image: url('/images/award_2.jpg'); background-size: cover; background-position: center;"></div>
 				</div>				
 			</div>
 

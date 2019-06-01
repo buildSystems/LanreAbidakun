@@ -193,44 +193,6 @@ a:hover {
 .header.home .container {
   height: 100%;
 }
-.header.home .container .slidein {
-  background-color: rgba(1, 71, 131, 0.9);
-  color: white;
-  display: block;
-  float: right;
-  padding: 24px;
-  width: 450px;
-  height: 100%;
-}
-.header.home .container .slidein h1 {
-  font-size: 45px;
-}
-.header.home .container .slidein h1:first-child {
-  margin-top: 100px;
-}
-.header.home .container .slidein h1.yellow {
-  color: yellow;
-  position: relative;
-  line-height: 80px;
-  text-align: top;
-}
-.header.home .container .slidein h1.yellow:after {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 2px;
-  border-bottom: 2px solid yellow;
-  bottom: 0px;
-  left: 0px;
-}
-.header.home .container .slidein p {
-  font-size: large;
-}
-@media only screen and (max-width: 768px) and (min-width: 320px) {
-  .header.home .container .slidein p {
-    font-size: medium;
-  }
-}
 .header .container .caption {
   background-color: #014783;
   color: white;
@@ -264,6 +226,44 @@ a:hover {
 }
 .header.map {
   background-image: url('/images/map.jpg');
+}
+.slidein {
+  background-color: rgba(1, 71, 131, 0.9);
+  color: white;
+  display: block;
+  float: right;
+  padding: 24px;
+  width: 450px;
+  height: 100%;
+}
+.slidein h1 {
+  font-size: 45px;
+}
+.slidein h1:first-child {
+  margin-top: 100px;
+}
+.slidein h1.yellow {
+  color: yellow;
+  position: relative;
+  line-height: 80px;
+  text-align: top;
+}
+.slidein h1.yellow:after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  border-bottom: 2px solid yellow;
+  bottom: 0px;
+  left: 0px;
+}
+.slidein p {
+  font-size: large;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .slidein p {
+    font-size: medium;
+  }
 }
 section {
   margin-top: 100px;
@@ -312,7 +312,7 @@ section {
   }
 }
 .about-section .container .row .lady {
-  background-image: url('/images/woman-entrepreneur.jpg');
+  background-image: url('/images/lanre_team_2.jpg');
   background-size: cover;
   background-position: right;
   padding: 0px;
@@ -874,6 +874,100 @@ section {
 }
 #responsive-menu #mobile-menu .mobile-links li.active a {
   color: #585858;
+}
+.slide-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .slide-container {
+    flex-direction: column;
+  }
+}
+.slide-container .member-description {
+  width: 50%;
+  text-align: justify;
+  margin-left: 20px;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .slide-container .member-description {
+    width: 90%;
+    text-align: center;
+    order: 2;
+  }
+}
+.slide-container .member-description p {
+  font-size: 14px;
+}
+.slide-container .team-member {
+  flex: 0 0 auto;
+  width: 50%;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .slide-container .team-member {
+    width: 100%;
+  }
+}
+.slide-container .team-member img {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 5px;
+  border: 2px solid #22498B;
+}
+.slide-container .team-member:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+.slide-container .team-member .team-member-details {
+  padding: 20px;
+  background-color: white;
+  color: #22498B;
+  height: 100px;
+}
+.slide-container .team-member .team-member-details a {
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  border: 2px solid white;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  transition: width 0.5s, height 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+  transition: width 0.5s, height 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+.slide-container .team-member .team-member-details a:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #22498B;
+}
+.slide-container .team-member .team-member-details:hover a {
+  display: inline-block;
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+.slide-container .team-member .team-member-details:hover h5 {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.slide-container .team-member .team-member-details:hover p {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .scroll-top {
   position: fixed;

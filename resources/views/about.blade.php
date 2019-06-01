@@ -33,7 +33,7 @@ About us
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 laughing-man-div">
-				<img class="animated laughing-man" src="/images/laughing-man.jpg" alt="" />
+				<img class="animated laughing-man" src="/images/office_laptop.jpg" alt="" />
 				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-3 col-xs-3 animated about-us-div delay-1s" >
 					<p>About us</p>
 				</div>
@@ -71,6 +71,62 @@ About us
 			<p>
 				Our MISSION is to ensure the provision of a comprehensive, world class, affordable and value-adding professional services to our clients, thereby contributing significantly towards the achievement of their goals and objectives. The array of specialized services provided by our firm are described below under the following headings.
 			</p>
+
+		</div>
+
+	</div>
+		
+</section>
+
+<section class="team animated ">
+
+	<div class="section-header animated zoomInUp">
+
+		<h1>Management Team</h1>
+
+	</div>
+
+	<div class="section-content animated zoomInUp">
+		<div class="container">
+
+			<div class="slide-container">
+
+				<div class="team-member">
+
+					<img id="first-team-member" src="/images/mr_lanre_2.jpg" alt="" />
+					<div id="first-member-details" class="team-member-details">
+						<h5 id="first-member-name">Peter Lanre Abidakun (FCA)</h5>
+						<p id="first-member-role">Managing Partner</p>
+					</div>
+				</div>
+
+				<div class="member-description">
+					<p>
+						Lanre is a seasoned Chartered Accountant and a fellow of the Institute of Chartered Accountants of Nigeria. He attended prestigious Yaba College of Technology, where he graduated with HND in Accountancy and Finance in 1986. He started his professional training with Folorunsho Olaleye &amp; Co. until 1995, when he decided to set up his own private practice, Lanre Abidakun &amp; Co., Chartered Accountants, which he has injected a lot of dynamism and professional astuteness into. He later invited some competent professional colleagues to join him as partners.
+						<br/><br/>Prior to setting up this accounting firm, he has worked in some Financial Institutions in management cadre and he has continued to bring the relevant experiences to bear in the quality of assignments delivered by him on behalf of the firm.
+						<br><br/>He has attended relevant courses in receivership and liquidation and other management courses. Lanre is very versed in auditing, taxation and receivership and has successfully handled many major assignments on behalf of various clients. His reputation and competence also earned him membership of the Governing Council of Federal Polytechnic Ede, Osun State from 2000 – 2003.
+					</p>
+				</div>
+			</div>
+
+			<div class="slide-container">
+
+				<div class="member-description">
+					<p>
+						Aanu is a highly self motivated, Trained and Qualified Chartered Accountant as well as an Associate of Institute of Strategic Management of Nigeria with over Two (2) years post qualification experience in General Administration, Audit, Financial Accounting, Management Accounting, Financial Analysis, Taxation.<br><br>
+						She attended Ladoke Akintola University of Technology, Ogbomosho, Oyo state where she obtained a Bachelor of Technology Degree in Accounting and Management in 2012. She started her professional career with Access Bank Plc, Abaliki, Ebonyi State and later joined the firm as an Audit Executive Associate (Trainee). Presently, she is the Quality Review Partner. This achievement is rooted in her Dynamic and Pro-active work ethics and is evident in her persistent quest for knowledge and new information for better service delivery.
+					</p>
+				</div>
+
+				<div class="team-member">
+					<img id="second-team-member" src="/images/fine_girl.jpg" alt="" />
+					<div id="second-member-details" class="team-member-details">
+						<h5 id="second-member-name">Elizabeth Aanu Adeniyi (ACA)</h5>
+						<p id="second-member-role">Quality Review Partner</p>
+					</div>
+				</div>
+
+			</div>
 
 		</div>
 
