@@ -46,6 +46,44 @@ function resolveNavAppearance(){
     }  
 }
 
+function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (event) {
+            $('#post-img').attr('src', event.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+
+    $(input).on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $(this).closest('.custom-file').html(fileName);
+    });
+}
+
+function readURL2(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (event) {
+            $('#publication-img').attr('src', event.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+
+    $(input).on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $(this).closest('.custom-file').html(fileName);
+    });
+}
+
 $(document).ready(function(){
 
 	//adjustNavbar();
@@ -151,6 +189,30 @@ $(document).ready(function(){
   //======================================================================================
   // End of changing services
   //======================================================================================
+
+  $('.sub-list-item').on('click', function(){
+  	window.location = $(this).data('target');
+  });
+
+  //What happens on clicking the image edit
+  $('#image-edit').on('click', function(){
+  		$('#post_photo').click();
+  });
+
+  //What happens on clicking the image edit
+  $('#image-edit').on('click', function(){
+  		$('#publication_photo').click();
+  });
+
+  //What happens when post photo changes
+  $('#post_photo').change(function(){
+	    readURL(this);
+	});
+
+  //What happens when post photo changes
+  $('#publication_photo').change(function(){
+	    readURL2(this);
+	});
 
 });
 

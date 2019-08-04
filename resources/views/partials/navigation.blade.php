@@ -4,6 +4,10 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="ti-menu"></i></span>
     </button>
+
+    
+    @if(! Route::is('dashboard') && ! Route::is('create-post') && ! Route::is('view-posts') && ! Route::is('create-publication') && ! Route::is('view-publications'))
+
     <div class="collapse navbar-collapse" id="main-nav"  >
       <ul class="navbar-nav" >
         <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
@@ -33,7 +37,41 @@
         <li class="nav-item {{ request()->route()->getName() == 'contact-us' ? 'active' : '' }}">
           <a class="nav-link" href="contact-us" href="#contact">Contact us</a>
         </li>
+        @auth 
+        <li class="nav-item ">
+          <a class="nav-link" href="/admin/dashboard/view-posts" >Dashboard</a>
+        </li>
+        @endauth
       </ul>
     </div>
+
+    @else
+
+    <div class="collapse navbar-collapse" id="main-nav"  >
+      <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item dropdown">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                  {{ Auth::user()->name }} <span class="caret"></span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item logout" href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();" >
+                      {{ __('Logout') }}
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
+              </div>
+          </li>
+
+      </ul>
+    </div>
+
+    @endif
+
   </div>
 </nav>

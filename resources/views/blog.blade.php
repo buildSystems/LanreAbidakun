@@ -29,14 +29,16 @@ Blog
 
 <section class="blog-section">
 
+	@foreach($posts as $post)
+
 	<div class="container">
 
-		<h2 class="blog-title">Blog Title 1</h2>
+		<h2 class="blog-title">{!! $post->title !!}</h2>
 		<div class="featured-image">
-			<img  src="/images/featured-image.jpg" alt="" />
+			<img  @if($post->post_img) src="{{ $post->post_img }}" @else src="/images/featured-image.jpg" @endif alt="" />
 		</div>
 		<p class="blog-body">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			{!! substr($post->body, 0, 35). '...' !!}
 		</p>
 
 		<div class="read-more-div"><a href="#" class="read-more" >Read more &gt;&gt;</a></div>
@@ -44,25 +46,10 @@ Blog
 		<div class="blog-divider"><div></div></div>
 		
 	</div>
+
+	@endforeach
 
 	
-
-	<div class="container">
-
-		<h2 class="blog-title">Blog Title 2</h2>
-		<div class="featured-image">
-			<img  src="/images/featured-image.jpg" alt="" />
-		</div>
-		<p class="blog-body">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		</p>
-
-		<div class="read-more-div"><a href="#" class="read-more" >Read more &gt;&gt;</a></div>
-
-		<div class="blog-divider"><div></div></div>
-		
-	</div>
-
 	
 
 </section>
