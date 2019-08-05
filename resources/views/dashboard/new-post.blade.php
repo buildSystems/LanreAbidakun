@@ -9,8 +9,10 @@
 		<div class="row">
 		
 			<div class="col-md-8">
-
+		
+			  <br>
 			  <h2>Create New Post</h2>
+			  <br>
 
 			  <div class="form-group">
 			    <label for="post-title">Title</label>

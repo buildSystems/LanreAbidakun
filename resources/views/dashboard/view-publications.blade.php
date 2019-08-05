@@ -1,6 +1,7 @@
 <div>
-
+	<br>
 	<h2>All Publications</h2>
+	<br>
 
 
 	<table class="table">
