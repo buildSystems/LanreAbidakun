@@ -64,7 +64,7 @@ Publications
 					{!! substr($post->body, 0, 35). '...' !!}
 				</p>
 
-				<div class="read-more-div"><a href="#" class="read-more" >Read more &gt;&gt;</a></div>
+				<div class="read-more-div"><a href="/publications/show-publication/{{ $post->id }}" class="read-more" >Read more &gt;&gt;</a></div>
 
 				<div class="blog-divider"><div></div></div>
 				
