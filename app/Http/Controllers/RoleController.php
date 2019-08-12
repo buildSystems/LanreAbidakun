@@ -2,17 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use Illuminate\Http\Request;
-use App\Post;
 
-
-class DashboardController extends Controller
+class RoleController extends Controller
 {
-
-    public function __construct(){
-
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -21,7 +15,6 @@ class DashboardController extends Controller
     public function index()
     {
         //
-        return view('dashboard');
     }
 
     /**
@@ -48,10 +41,10 @@ class DashboardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Role $role)
     {
         //
     }
@@ -59,10 +52,10 @@ class DashboardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Role $role)
     {
         //
     }
@@ -71,10 +64,10 @@ class DashboardController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Role $role)
     {
         //
     }
@@ -82,28 +75,10 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
-
-    //========================================================================================
-    //========================================================================================
-
-    public function createPost()
-    {
-        //
-    }
-
-    public function editPost($id)
-    {
-        //
-    }
-
-    public function viewPosts()
+    public function destroy(Role $role)
     {
         //
     }

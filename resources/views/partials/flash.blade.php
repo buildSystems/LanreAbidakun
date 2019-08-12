@@ -5,9 +5,9 @@
 	</div>
 	@endif
 
-	@if(@session('failed_submit'))
+	@if(@session('failure_submit'))
 	<div class="alert alert-danger" style="margin: auto; padding: 4px 16px; text-align: center; display: inline-block;">
-		{{ @session('failed_submit') }}
+		{{ @session('failure_submit') }}
 	</div>
 	@endif
 

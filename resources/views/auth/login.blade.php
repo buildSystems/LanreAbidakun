@@ -5,12 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                
                 <div class="card-header" style="text-align: center;"><b>{{ __('Login') }}</b></div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('user-login') }}">
                         @csrf
-
+                        @include('partials.flash')
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
 
@@ -64,7 +65,9 @@
                                 @endif
                             </div>
                         </div>
+                        
                     </form>
+
                 </div>
             </div>
         </div>

@@ -31,6 +31,19 @@ Dashboard
 						<li class="sub-list-item @if(Route::is('view-publications')) active @endif" data-target="{{ route('view-publications') }}" >View Publications</li>
 					</ul>
 				</li>
+				@if(auth()->user()->role_id == 1)
+				<li class="side-nav-list-item active"><span class="item">Users</span>
+					<ul class="sub-list-items">
+						<li class="sub-list-item @if(Route::is('create-user')) active @endif" data-target="{{ route('create-user') }}" >Create New User</li>
+						<li class="sub-list-item @if(Route::is('view-users')) active @endif" data-target="{{ route('view-users') }}" >View Users</li>
+					</ul>
+				</li>
+				@endif
+				<li class="side-nav-list-item active"><span class="item">Profile</span>
+					<ul class="sub-list-items">
+						<li class="sub-list-item @if(Route::is('change-password')) active @endif" data-target="{{ route('change-password') }}" >Change password</li>
+					</ul>
+				</li>
 			</ul>
 			
 		</div>
@@ -45,6 +58,18 @@ Dashboard
 				@include('dashboard.new-publication')
 			@elseif(Route::is('view-publications'))
 				@include('dashboard.view-publications')
+			@elseif(Route::is('create-user'))
+				@include('dashboard.new-user')
+			@elseif(Route::is('view-users'))
+				@include('dashboard.view-users')
+			@elseif(Route::is('edit-user'))
+				@include('dashboard.edit-user')
+			@elseif(Route::is('edit-post'))
+				@include('dashboard.edit-post')
+			@elseif(Route::is('edit-publication'))
+				@include('dashboard.edit-publication')
+			@elseif(Route::is('change-password'))
+				@include('dashboard.change-password')
 			@endif
 
 		</div>

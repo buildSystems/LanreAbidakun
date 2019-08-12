@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\Post;
+use App\Publication;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +28,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        view()->composer('partials.blog.sidebar', function($view){
+            return $view->with(['recentPosts' => Post::recent()] );
+        });
+
+        view()->composer('partials.blog.sidebar', function($view){
+            return $view->with(['recentPublications' => Publication::recent()] );
+        });
     }
 }

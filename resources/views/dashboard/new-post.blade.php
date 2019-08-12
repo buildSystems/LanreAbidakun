@@ -36,7 +36,7 @@
 			   
 			    <div class="form-group post-img-div" >
 			    	<img id="post-img" src="/images/featured-image.jpg" alt="Post image" style="width: 100%;"/>
-			    	<div id="image-edit" ><i title="Add post picture" class="fas fa-camera"></i> {{ __('Change') }}</div>
+			    	<div id="image-edit" ><i title="Add post picture" class="fas fa-camera"></i> {{ __('Add post image') }}</div>
 			    </div>
 			    <div  class="form-group">
 					<small>We recommend using a 1920px by 1080px image not larger than 2mb</small>

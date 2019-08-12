@@ -790,23 +790,75 @@ section{
   margin-bottom: 50px !important;
 }
 
-.blog-section{
+.blog-section, .publications-section{
 
   .container{
 
    overflow: hidden;
 
+   .row{
+      flex-wrap: nowrap;
+      @media @media768{
+       flex-wrap: wrap;
+      }
+
+     .blog-main{
+       
+     }
+
+     .blog-sidebar{
+        margin-left: 50px;
+        margin-top: 50px;
+        padding: 50px;
+        background-color: fade(@app_blue, 10%);
+        display: inline-block;
+        position: sticky;
+        height: 800px;
+
+        @media @media768{
+         display: none;
+        }
+
+        h4{
+          margin-top: 30px;
+        }
+
+        ul{
+
+          list-style-type: none;
+          padding-left: 0px;
+
+          li{
+
+              line-height: 2.5;
+              a{
+                font-size: 16px;
+              }
+
+          }
+
+        }
+       
+     }
+   }
+
+
     .blog-title{
       margin: 50px 0px;
+      width: 60%;
     }
 
     .featured-image{
-      width: 60%;
+      width: 100%;
       @media @media768{
         width: 100%;
       }
       height: 300px;
       overflow: hidden;
+
+      &.full-image{
+        height: auto;
+      }
 
       img{
         width: 100%;
@@ -815,7 +867,7 @@ section{
     }
 
     .blog-body{
-      width: 60%;
+      
       @media @media768{
         width: 100%;
         padding: 0px 20px;
@@ -825,7 +877,6 @@ section{
 
     .read-more-div{
 
-      width: 60%;
       @media @media768{
         width: 100%;
         padding: 0px 20px;
@@ -841,7 +892,6 @@ section{
     .blog-divider{
 
       height: 10px;
-      width: 60%;
       @media @media768{
         width: 100%;
       }
@@ -1280,7 +1330,7 @@ section{
   position: relative;
 
   &:hover{
-    opacity: .5;
+    opacity: .7;
   }
   
   #image-edit{
@@ -1291,12 +1341,36 @@ section{
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     cursor: pointer;
+    text-align: center;
 
     &:hover{
-      color: @app_blue;
+      color: black;
 
     }
 
   }
 
+}
+
+.posts-table, .publications-table, .users-table{
+  tr{
+    cursor: pointer;
+    &:hover{
+      background-color: #eee;
+    }
+  }
+}
+
+.download-attachment{
+  padding: 10px; 
+  border-radius: 5px; 
+  border: 1px solid black;
+  position: absolute;
+  right: 20%;
+  top: 50px;
+  
+
+  &.hover{
+    background-color: fade(@app_blue, 10);
+  }
 }

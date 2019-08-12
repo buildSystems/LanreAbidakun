@@ -18,6 +18,9 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('body');
             $table->string('post_img')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('no action');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -29,6 +32,7 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('users');
         Schema::dropIfExists('posts');
     }
 }

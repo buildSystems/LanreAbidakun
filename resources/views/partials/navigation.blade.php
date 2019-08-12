@@ -6,7 +6,7 @@
     </button>
 
     
-    @if(! Route::is('dashboard') && ! Route::is('create-post') && ! Route::is('view-posts') && ! Route::is('create-publication') && ! Route::is('view-publications'))
+    @if(! strpos(Request::path(), 'dashboard') )
 
     <div class="collapse navbar-collapse" id="main-nav"  >
       <ul class="navbar-nav" >
@@ -37,11 +37,16 @@
         <li class="nav-item {{ request()->route()->getName() == 'contact-us' ? 'active' : '' }}">
           <a class="nav-link" href="contact-us" href="#contact">Contact us</a>
         </li>
-        @auth 
+        
+        @guest
+        <li class="nav-item ">
+          <a class="nav-link" href="/admin/login" >Sign in</a>
+        </li>
+        @else
         <li class="nav-item ">
           <a class="nav-link" href="/admin/dashboard/view-posts" >Dashboard</a>
         </li>
-        @endauth
+        @endguest
       </ul>
     </div>
 

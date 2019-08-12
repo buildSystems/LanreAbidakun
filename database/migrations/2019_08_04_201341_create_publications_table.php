@@ -18,6 +18,11 @@ class CreatePublicationsTable extends Migration
             $table->string('title');
             $table->string('body');
             $table->string('publication_img')->nullable();
+            $table->string('attachment')->nullable();
+            $table->string('attachment_name')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('no action');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -29,6 +34,7 @@ class CreatePublicationsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('users');
         Schema::dropIfExists('publications');
     }
 }

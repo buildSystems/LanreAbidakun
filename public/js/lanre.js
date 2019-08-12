@@ -84,6 +84,36 @@ function readURL2(input) {
     });
 }
 
+function readURL3(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (event) {
+            $('#user-img').attr('src', event.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+
+    $(input).on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $(this).closest('.custom-file').html(fileName);
+    });
+}
+
+function launchDeleteModal(id, title, image){
+	$('#modal #image').attr('src', image);
+	$('#modal #toDelete').text(title);
+	$('#modal #positive').click(function(){
+		$('#' + id + '-form').submit();
+	});
+	$('#modal').modal('show');
+}
+
+
+
 $(document).ready(function(){
 
 	//adjustNavbar();
@@ -196,12 +226,20 @@ $(document).ready(function(){
 
   //What happens on clicking the image edit
   $('#image-edit').on('click', function(){
-  		$('#post_photo').click();
+  	$('#post_photo').click();
+  		
   });
 
   //What happens on clicking the image edit
   $('#image-edit').on('click', function(){
-  		$('#publication_photo').click();
+  	$('#publication_photo').click();
+
+  });
+
+  //What happens on clicking the image edit
+  $('#image-edit').on('click', function(){
+  	$('#user_photo').click();
+
   });
 
   //What happens when post photo changes
@@ -213,6 +251,19 @@ $(document).ready(function(){
   $('#publication_photo').change(function(){
 	    readURL2(this);
 	});
+
+  //What happens when user photo changes
+  $('#user_photo').change(function(){
+	    readURL3(this);
+	});
+
+  //What happens when someone selects a file for publication attachment
+  $('#publication-attachment').on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $(this).next('.custom-file-label').html(fileName);
+    });
 
 });
 
